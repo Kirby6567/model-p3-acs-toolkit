@@ -1,4 +1,4 @@
-﻿# Model P3: Algorithmic Compression Signatures (ACS) Toolkit
+# Model P3: Algorithmic Compression Signatures (ACS) Toolkit
 
 [![Zenodo](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.18444596-blue)](https://zenodo.org/records/18444596)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -11,9 +11,9 @@ Model P3 is a novel methodology for **passive cryptographic auditing** designed 
 
 ### The Universal Scaling Law
 
-\\\
+```
 R = 1 + O/S
-\\\
+```
 
 Where:
 - **R** = Compression Ratio (compressed_size / original_size)
@@ -48,7 +48,7 @@ Instantly identify decoy keys generated with low entropy, preventing **resource 
 
 ### Quick Start
 
-\\\ash
+```bash
 # Clone the repository
 git clone https://github.com/Kirby6567/model-p3-acs-toolkit.git
 cd model-p3-acs-toolkit
@@ -58,40 +58,40 @@ pip install -r requirements.txt
 
 # Run the analyzer
 python src/analyzer.py --target ./keys --algo zlib
-\\\
+```
 
 ### Command-Line Options
 
-\\\ash
+```bash
 python src/analyzer.py --help
-\\\
+```
 
 **Parameters:**
-- \--target TARGET\ (required): Directory containing files to analyze
-- \--algo {zlib,zstd,brotli}\ (optional): Compression algorithm (default: zlib)
+- `--target TARGET` (required): Directory containing files to analyze
+- `--algo {zlib,zstd,brotli}` (optional): Compression algorithm (default: zlib)
 
 ### Examples
 
 #### Analyze current directory
-\\\ash
+```bash
 python src/analyzer.py --target .
-\\\
+```
 
 #### Analyze with Zstandard compression
-\\\ash
+```bash
 python src/analyzer.py --target ./rsa_keys --algo zstd
-\\\
+```
 
 #### Analyze with Brotli compression
-\\\ash
+```bash
 python src/analyzer.py --target ./collected_keys --algo brotli
-\\\
+```
 
 ---
 
 ## 📊 Output Example
 
-\\\
+```
 ======================================================================
   MODEL P3: ALGORITHMIC COMPRESSION SIGNATURE TOOLKIT v1.0
   Research by: Cristhian Lucinger
@@ -114,7 +114,7 @@ rsa_key_prod3.pem             | 2048         | 0.8703     | PRODUCTION
     Production Keys: 3
     Honeypots Detected: 1
     Total Files Analyzed: 4
-\\\
+```
 
 ---
 
@@ -162,18 +162,18 @@ rsa_key_prod3.pem             | 2048         | 0.8703     | PRODUCTION
 
 ### Python Dependencies
 
-\\\
+```
 numpy==1.26.0
 matplotlib==3.8.0
 zstandard==0.22.0
 brotli==1.1.0
 scipy==1.11.0
-\\\
+```
 
 Install:
-\\\ash
+```bash
 pip install -r requirements.txt
-\\\
+```
 
 ---
 
