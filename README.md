@@ -10,9 +10,7 @@ Model P3 is a novel methodology for **passive cryptographic auditing**. By analy
 
 The core discovery is the **Universal Scaling Law**:
 
-\\\
 R = 1 + O/S
-\\\
 
 Where O represents the algorithmic overhead constant specific to the compression algorithm (ZLIB, Zstd, Brotli).
 
@@ -24,8 +22,7 @@ For Offensive Security operations, this tool allows for:
 2. **Honeypot Detection:** Instantly identify decoy keys generated with low entropy, preventing resource exhaustion during engagement.
 
 ## 🚀 Installation & Usage
-
-\\\ash
+```bash
 # Clone the repository
 git clone https://github.com/Kirby6567/model-p3-acs-toolkit.git
 cd model-p3-acs-toolkit
@@ -35,7 +32,7 @@ pip install -r requirements.txt
 
 # Run the analyzer
 python src/analyzer.py --target keys/ --algo zlib
-\\\
+```
 
 ## 📊 Validation
 
